@@ -1,0 +1,26 @@
+#variables
+spam = []
+
+#start
+print('What would you like to add to list enter space to finish')
+
+#main loop
+while True: 
+    spamlistvalue = input()
+    if spamlistvalue != ' ':
+        spam.append(spamlistvalue)
+    elif spamlistvalue == ' ':
+        break
+
+#what to print with user input
+while True:
+#if nothing
+	if len(spam) == 0:
+		print('You aint got nothing')
+		break
+#if something
+	for spamlistvalue in range(len(spam) - 1):
+	    print(spam[spamlistvalue] + ', ', end='')
+	print('and ', end='')
+	print(spam[-1] + '.')
+	break
